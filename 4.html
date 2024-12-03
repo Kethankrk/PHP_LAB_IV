@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <button onclick="changeColor()">Change Color</button>
+    <script>
+      let colors = ["red", "blue", "green", "yellow", "pink"];
+      function changeColor() {
+        document.body.style.background =
+          colors[Math.floor(Math.random() * colors.length)];
+      }
+    </script>
+  </body>
+</html>

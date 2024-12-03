@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <h1 id="clock"></h1>
+    <script>
+      function updateClock() {
+        let now = new Date();
+        let h = ("0" + (now.getHours() % 12 || 12)).slice(-2);
+        let m = ("0" + now.getMinutes()).slice(-2);
+        let s = ("0" + now.getSeconds()).slice(-2);
+        let ampm = now.getHours() >= 12 ? "PM" : "AM";
+        document.getElementById("clock").innerHTML = `${h}:${m}:${s} ${ampm}`;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+  </body>
+</html>

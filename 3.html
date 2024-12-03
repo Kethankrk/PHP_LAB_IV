@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <h1>Arithmetic Operation</h1>
+    Enter number1: <input type="number" id="num1" /><br /><br />
+    Enter number2: <input type="number" id="num2" /><br /><br />
+    <button onclick="calculate('+')">Add</button>
+    <button onclick="calculate('-')">Subtract</button>
+    <button onclick="calculate('*')">Multiply</button>
+    <button onclick="calculate('/')">Divide</button><br /><br />
+    <output id="result"></output>
+    <script>
+      function calculate(op) {
+        let x = parseFloat(document.getElementById("num1").value);
+        let y = parseFloat(document.getElementById("num2").value);
+        document.getElementById("result").value = eval(`${x} ${op} ${y}`);
+      }
+    </script>
+  </body>
+</html>

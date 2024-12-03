@@ -1,0 +1,29 @@
+<html lang="en">
+  <body>
+    <h1>Pay slip generator</h1>
+    <form
+      action="17.php"
+      method="POST"
+      style="
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 350px;
+        gap: 10px;
+      "
+    >
+      <b>Name</b><input name="name" /> <b>Basic Salaray</b> <input name="bs" />
+      <b>Designation</b>
+      <select name="des">
+        <option value="manager">Manager</option>
+        <option value="supervisor">Supervisor</option>
+        <option value="clerk">Clerk</option>
+        <option value="peon">Peon</option>
+      </select>
+      <input
+        type="submit"
+        value="Generate"
+        style="grid-column-start: 1; grid-column-end: 3"
+      />
+    </form>
+  </body>
+</html>

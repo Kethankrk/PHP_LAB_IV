@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <input type="number" id="startYear" placeholder="Start Year" />
+    <input type="number" id="endYear" placeholder="End Year" />
+    <button onclick="findSundays()">Find Sundays</button>
+    <p id="result"></p>
+    <script>
+      function findSundays() {
+        const start = parseInt(document.getElementById("startYear").value);
+        const end = parseInt(document.getElementById("endYear").value);
+        const sundays = [];
+        for (let year = start; year <= end; year++) {
+          if (new Date(year, 0, 1).getDay() === 0) sundays.push(year);
+        }
+        document.getElementById("result").innerText =
+          sundays.join(", ") || "No Sundays found";
+      }
+    </script>
+  </body>
+</html>

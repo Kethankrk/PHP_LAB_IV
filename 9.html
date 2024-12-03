@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <input
+      type="text"
+      id="textbox"
+      onfocus="changeStyle(true)"
+      onblur="changeStyle(false)"
+    />
+    <script>
+      function changeStyle(focus) {
+        const textbox = document.getElementById("textbox");
+        if (focus) {
+          textbox.style.color = "red";
+          textbox.style.background = "yellow";
+        } else {
+          textbox.style.color = "black";
+          textbox.style.background = "white";
+        }
+      }
+    </script>
+  </body>
+</html>
